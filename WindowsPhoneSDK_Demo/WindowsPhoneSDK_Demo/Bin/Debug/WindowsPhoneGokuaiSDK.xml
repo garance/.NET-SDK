@@ -1,0 +1,866 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WindowsPhoneGokuaiSDK</name>
+    </assembly>
+    <members>
+        <member name="M:WindowsPhoneGokuaiSDK.App.#ctor">
+            <summary>
+            Application 对象的构造函数。
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.App.RootFrame">
+             <summary>
+            提供对电话应用程序的根框架的轻松访问。
+             </summary>
+             <returns>电话应用程序的根框架。</returns>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.BaseData">
+            <summary>
+            网络返回数据
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.BaseData.Create(System.String,System.Boolean)">
+            <summary>
+            返回数据读取
+            </summary>
+            <param name="jsonString"></param>
+            <param name="isError">是否错误</param>
+            <returns></returns>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.BaseData.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.BaseData.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.CallBackData">
+            <summary>
+            返回参数数据
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.FileData">
+            <summary>
+            文件列表单项数据
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.FileData.Create(WindowsPhoneGokuaiSDK.ClassFile.JsonObject)">
+            <summary>
+            文件列表单项数据读取
+            </summary>
+            <param name="jsonObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.FileData.Create(System.String,System.Boolean)">
+            <summary>
+            单文件数据
+            </summary>
+            <param name="jsonString"></param>
+            <param name="isError"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.FullPath">
+            <summary>
+            全路径
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.LastDateline">
+            <summary>
+            最后更新的时间戳
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.Hash">
+            <summary>
+            hash
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.Dir">
+            <summary>
+            是否为文件夹
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.LastMemberName">
+            <summary>
+            最后更新人员名
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.FileHash">
+            <summary>
+            文件hash
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.Uri">
+            <summary>
+            下载地址
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.Preview">
+            <summary>
+            文件预览地址
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileData.Thumbnail">
+            <summary>
+            文件缩略图
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.FileListData">
+            <summary>
+            文件列表数据
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.FileListData.Create(System.String,System.Boolean)">
+            <summary>
+            文件列表读取
+            </summary>
+            <param name="jsonString"></param>
+            <param name="isError"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileListData.Count">
+            <summary>
+            文件和文件总数
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.FileListData.DataList">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.GokuaiAuth">
+            <summary>
+            Oauth认证
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiAuth.#ctor">
+            <summary>
+            未申请clientId
+            使用的认证构造函数
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiAuth.#ctor(System.String,System.String)">
+            <summary>
+            已申请clientid
+            使用的认证构造函数
+            </summary>
+            <param name="clientId"></param>
+            <param name="clientSecret"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiAuth.token(System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            获取token
+            </summary>
+            <param name="email"></param>
+            <param name="handler">回调handler</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.CreateFolder(System.String,System.String,System.String,System.Int32,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            新建文件夹
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="filehash">文件hash</param>
+            <param name="overwrite">上传有同名文件是否覆盖,不传默认0， 0覆盖，1新建</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.UploadFile(System.String,System.String,System.String,System.Int32,System.IO.Stream,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="filehash">文件hash</param>
+            <param name="overwrite">上传有同名文件是否覆盖,不传默认0 0覆盖，1新建</param>
+            <param name="stream"></param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.Add(System.String,System.String,System.String,System.Int32,System.IO.Stream,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            新增文件、文件夹
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="filehash">文件hash</param>
+            <param name="overwrite">上传有同名文件是否覆盖,不传默认0 0覆盖，1新建</param>
+            <param name="stream"></param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.GetFileInfo(System.String,System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            获取文件信息
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.GetFileList(System.String,System.Int32,System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            获取文件列表
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="start">默认为0，返回100条数据</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.Copy(System.String,System.String,System.String,System.Int32,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            应用复制
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="frompath">源路径 文件夹后跟“/”</param>
+            <param name="overwrite">上传有同名文件是否覆盖,不传默认0， 0覆盖，1新建</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.GetThumbUrl(System.String,System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            缩略图302地址
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.GetFileUrl(System.String,System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            文件302地址
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount"></param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.GetPreviewUrl(System.String,System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            预览302地址
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.Head(System.String,System.String,System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            获取路径
+            </summary>
+            <param name="path">文件路径，文件夹后跟“/”</param>
+            <param name="mount">mout=gokuai 删除该用户用的存储文件</param>
+            <param name="type"></param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.Del(System.String,System.String,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="path">删除路径</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.GenerateUrl(System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            生成URL
+            </summary>
+            <param name="method">方法</param>
+            <param name="paramList">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.GokuaiClient.GenerateSign(System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="method">方法</param>
+            <param name="path">路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.OauthData">
+            <summary>
+            认证信息
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.OauthData.Create(System.String,System.Boolean)">
+            <summary>
+            从json获取oauth数据
+            </summary>
+            <param name="jsonString">json字符串</param>
+            /// <param name="isError">是否错误</param>
+            <returns></returns>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.OauthData.Token">
+            <summary>
+            登陆token
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.UrlDecoder">
+            <summary>
+            Url解码类
+            </summary>
+            <remarks>
+            摘自：http://blog.csdn.net/cgcgyv/article/details/6301580
+            </remarks>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.UrlEncoder">
+            <summary>
+            Url编码类
+            </summary>
+            <remarks>
+            摘自：http://blog.csdn.net/cgcgyv/article/details/6301580
+            </remarks>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.Util">
+            <summary>
+            转化集
+            </summary>
+        </member>
+        <member name="F:WindowsPhoneGokuaiSDK.ClassFile.Util.ROOT_PATH">
+            <summary>
+            app根目录
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.Util.EncodeToHMACSHA1(System.String,System.String)">
+            <summary>
+            HMacsha1加密，最后做base64加密
+            </summary>
+            <param name="toEncodeString"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.Util.ReadToEnd(System.IO.Stream)">
+            <summary>
+            流文件转byte
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.Util.getParentPath(System.String,System.String)">
+            <summary>
+            获取文件父级路径
+            </summary>
+            <param name="path"></param>
+            <param name="seperatorString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.Util.jsonOptlong(System.String,WindowsPhoneGokuaiSDK.ClassFile.JsonObject,System.Int64)">
+            <summary>
+            获取json long值
+            </summary>
+            <param name="key"></param>
+            <param name="json"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.Util.jsonOptInt(System.String,WindowsPhoneGokuaiSDK.ClassFile.JsonObject,System.Int32)">
+            <summary>
+            获取json int值
+            </summary>
+            <param name="key"></param>
+            <param name="json"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.Util.jsonOptString(System.String,WindowsPhoneGokuaiSDK.ClassFile.JsonObject)">
+            <summary>
+            获取json string值
+            </summary>
+            <param name="key"></param>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.Util.jsonOptBool(System.String,WindowsPhoneGokuaiSDK.ClassFile.JsonObject,System.Boolean)">
+            <summary>
+            获取json bool类型
+            </summary>
+            <param name="key"></param>
+            <param name="json"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.UtilDebug">
+            <summary>
+            输出日志
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs">
+            <summary>
+            Http请求参数类
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs.#ctor(System.String)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="result">返回结果</param>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs.Result">
+            <summary>
+            结果字符串
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs.IsError">
+            <summary>
+            是否错误
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest">
+            <summary>
+            winphone7的HTTP封装类
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+            <remarks>
+            默认的请求方式的GET
+            </remarks>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.AppendParameter(System.String,System.String)">
+            <summary>
+            追加参数
+            </summary>
+            <param name="key">进行追加的键</param>
+            <param name="value">键对应的值</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.AppendHeaderParameter(System.String,System.String)">
+            <summary>
+            追加头参数
+            </summary>
+            <param name="key">追加键</param>
+            <param name="value">键对应的值</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.OnHttpCompleted(WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            触发HTTP请求完成方法
+            </summary>
+            <param name="e">事件参数</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.Request">
+            <summary>
+            进行HTTP请求
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.GetRequest">
+            <summary>
+            HTTP方式的GET请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.PostRequest">
+            <summary>
+            HTTP的POST请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.PutRequest">
+            <summary>
+            HTTP的PUT请求
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.getParemeterString">
+            <summary>
+            获取传递参数的字符串
+            </summary>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.handlePostReady(System.IAsyncResult)">
+            <summary>
+            异步请求回调函数
+            </summary>
+            <param name="asyncResult">异步请求参数</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.handlePutReady(System.IAsyncResult)">
+            <summary>
+            异步请求回调函数
+            </summary>
+            <param name="asyncResult">异步请求参数</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.handleResponse(System.IAsyncResult)">
+            <summary>
+            异步响应回调函数
+            </summary>
+            <param name="asyncResult">异步请求参数</param>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.RequetContent">
+            <summary>
+            提交的内容 string
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.UploadStream">
+            <summary>
+            上传流数据
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.DownloadPath">
+            <summary>
+            下载路径
+            </summary>
+        </member>
+        <member name="E:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest._httpCompleted">
+            <summary>
+            Http请求完成事件
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.RequestUrl">
+            <summary>
+            请求URL地址
+            </summary>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.RequestMethod">
+            <summary>
+            请求方式
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.WP7HttpRequest.HttpResquestEventHandler">
+            <summary>
+            Http请求指代
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="e">发送所带的参数</param>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.RequestType">
+            <summary>
+            枚举请求类型
+            </summary>
+        </member>
+        <member name="F:WindowsPhoneGokuaiSDK.ClassFile.RequestType.GET">
+            <summary>
+            GET请求
+            </summary>
+        </member>
+        <member name="F:WindowsPhoneGokuaiSDK.ClassFile.RequestType.POST">
+            <summary>
+            POST请求
+            </summary>
+        </member>
+        <member name="F:WindowsPhoneGokuaiSDK.ClassFile.RequestType.PUT">
+            <summary>
+            PUT请求
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.MainPage">
+            <summary>
+            主界面
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Btn_GetToken_HaveClientID_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            获取token（有clientID）按钮事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Request_Token_HttpCompleted(System.Object,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            获取token  网络访问数据回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Btn_CreateFolder_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            创建文件夹 按钮事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Request_CreateFolder_HttpCompleted(System.Object,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            创建文件夹 网络访问数据回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Btn_UploadFile_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            上传文件 按钮事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Request_UploadFile_HttpCompleted(System.Object,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            上传文件 网络访问数据回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Btn_GetFileList_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            获得文件列表 按钮事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Request_FileList_HttpCompleted(System.Object,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            获得文件列表 网络访问数据回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Btn_Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            删除文件 按钮事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Request_Delete_HttpCompleted(System.Object,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            删除文件 网络访问数据回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Btn_Picture_Select_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            选择图片
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Request_GetFileInfo_Compelted(System.Object,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            获取文件信息回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.Request_Copy_Compeleted(System.Object,WindowsPhoneGokuaiSDK.ClassFile.WP7HttpEventArgs)">
+            <summary>
+            复制请求回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.MainPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.JsonArray">
+            <summary>
+            Represents the json array.
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonArray.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:WindowsPhoneGokuaiSDK.ClassFile.JsonArray"/> class. 
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonArray.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WindowsPhoneGokuaiSDK.ClassFile.JsonArray"/> class. 
+            </summary>
+            <param name="capacity">The capacity of the json array.</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonArray.ToString">
+            <summary>
+            The json representation of the array.
+            </summary>
+            <returns>The json representation of the array.</returns>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.JsonObject">
+            <summary>
+            Represents the json object.
+            </summary>
+        </member>
+        <member name="F:WindowsPhoneGokuaiSDK.ClassFile.JsonObject._members">
+            <summary>
+            The internal member dictionary.
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Add(System.String,System.Object)">
+            <summary>
+            Adds the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.ContainsKey(System.String)">
+            <summary>
+            Determines whether the specified key contains key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>
+            	<c>true</c> if the specified key contains key; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Remove(System.String)">
+            <summary>
+            Removes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.TryGetValue(System.String,System.Object@)">
+            <summary>
+            Tries the get value.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Add(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            Adds the specified item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Contains(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            Determines whether [contains] [the specified item].
+            </summary>
+            <param name="item">The item.</param>
+            <returns>
+            	<c>true</c> if [contains] [the specified item]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.CopyTo(System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="arrayIndex">Index of the array.</param>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Remove(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            Removes the specified item.
+            </summary>
+            <param name="item">The item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.ToString">
+            <summary>
+            Returns a json <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            A json <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:System.Object"/> at the specified index.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Keys">
+            <summary>
+            Gets the keys.
+            </summary>
+            <value>The keys.</value>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Values">
+            <summary>
+            Gets the values.
+            </summary>
+            <value>The values.</value>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Item(System.String)">
+            <summary>
+            Gets or sets the <see cref="T:System.Object"/> with the specified key.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="P:WindowsPhoneGokuaiSDK.ClassFile.JsonObject.IsReadOnly">
+            <summary>
+            Gets a value indicating whether this instance is read only.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is read only; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:WindowsPhoneGokuaiSDK.ClassFile.SimpleJson">
+            <summary>
+            This class encodes and decodes JSON strings.
+            Spec. details, see http://www.json.org/
+            
+            JSON uses Arrays and Objects. These correspond here to the datatypes JsonArray(IList&lt;object>) and JsonObject(IDictionary&lt;string,object>).
+            All numbers are parsed to doubles.
+            </summary>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.SimpleJson.DeserializeObject(System.String)">
+            <summary>
+            Parses the string json into a value
+            </summary>
+            <param name="json">A JSON string.</param>
+            <returns>An IList&lt;object>, a IDictionary&lt;string,object>, a double, a string, null, true, or false</returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.SimpleJson.TryDeserializeObject(System.String,System.Object@)">
+            <summary>
+            Try parsing the json string into a value.
+            </summary>
+            <param name="json">
+            A JSON string.
+            </param>
+            <param name="object">
+            The object.
+            </param>
+            <returns>
+            Returns true if successfull otherwise false.
+            </returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.SimpleJson.SerializeObject(System.Object,WindowsPhoneGokuaiSDK.ClassFile.IJsonSerializerStrategy)">
+            <summary>
+            Converts a IDictionary&lt;string,object> / IList&lt;object> object into a JSON string
+            </summary>
+            <param name="json">A IDictionary&lt;string,object> / IList&lt;object></param>
+            <param name="jsonSerializerStrategy">Serializer strategy to use</param>
+            <returns>A JSON encoded string, or null if object 'json' is not serializable</returns>
+        </member>
+        <member name="M:WindowsPhoneGokuaiSDK.ClassFile.SimpleJson.IsNumeric(System.Object)">
+            <summary>
+            Determines if a given object is numeric in any way
+            (can be integer, double, null, etc).
+            </summary>
+        </member>
+    </members>
+</doc>

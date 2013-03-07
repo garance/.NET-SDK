@@ -1,0 +1,15 @@
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\ApplicationIcon.png
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\Background.png
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\WindowsPhoneSDK_Demo.dll
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\WindowsPhoneSDK_Demo.pdb
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\AppManifest.xaml
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\WindowsPhoneSDK_Demo.xap
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\obj\Debug\WindowsPhoneSDK_Demo.csprojResolveAssemblyReference.cache
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\obj\Debug\App.g.cs
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\obj\Debug\MainPage.g.cs
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\obj\Debug\WindowsPhoneSDK_Demo.g.resources
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\obj\Debug\WindowsPhoneSDK_Demo.dll
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\obj\Debug\WindowsPhoneSDK_Demo.pdb
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\obj\Debug\XapCacheFile.xml
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\WindowsPhoneGokuaiSDK.dll
+D:\wp_project\WindowsPhoneSDK_Demo\WindowsPhoneSDK_Demo\Bin\Debug\WindowsPhoneGokuaiSDK.xml
